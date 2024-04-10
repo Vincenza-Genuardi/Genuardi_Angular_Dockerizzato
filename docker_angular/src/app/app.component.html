@@ -1,0 +1,19 @@
+<div class="lightbulb">
+  <div id="reflection" [ngStyle]="{ display: isOn ? 'block' : 'none' }"></div>
+  <div class="light" [ngClass]="{ active: isOn }"></div>
+  <div class="lower">
+    <div class="rows" id="r1"></div>
+    <div class="rows" id="r2"></div>
+    <div class="rows" id="r3"></div>
+    <div class="lowest"></div>
+  </div>
+</div>
+<div
+  class="btn"
+  [ngClass]="{ clicked }"
+  #btn
+  (mousedown)="mouseDown()"
+  (mouseup)="mouseUp()"
+>
+  <p>{{ isOn ? "Off" : "On" }}</p>
+</div>

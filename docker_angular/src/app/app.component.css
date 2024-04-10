@@ -1,0 +1,138 @@
+.lightbulb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .light {
+    margin-top: -200px;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    background-color: #bbb;
+  }
+  
+  .light::after {
+    position: absolute;
+    content: "";
+    background-color: #bbb;
+    width: 200px;
+    height: 100px;
+    top: calc(100% - 3px);
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(10px) rotateX(-3.5deg);
+  }
+  
+  .active {
+    background-color: #ff0;
+  }
+  
+  .active::after {
+    background-color: #ff0;
+  }
+  
+  .rows {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(4deg);
+    background-color: #777;
+    width: 154px;
+    height: 15px;
+    border-radius: 15px;
+  }
+  
+  #r1 {
+    top: 135%;
+  }
+  
+  #r2 {
+    top: calc(135% + 20px);
+  }
+  
+  #r3 {
+    top: calc(135% + 40px);
+  }
+  
+  .lowest {
+    position: absolute;
+    left: 50%;
+    top: 182%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: #777;
+    width: 120px;
+    height: 15px;
+  }
+  
+  .lowest::after {
+    position: absolute;
+    content: "";
+    background-color: transparent;
+    width: 40px;
+    height: 10px;
+    top: calc(400% - 33px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 15px solid #777;
+    border-top: 0;
+  }
+  
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f00;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 75%;
+  }
+  
+  .btn p {
+    color: #fff;
+    user-select: none;
+    font-weight: bold;
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .clicked {
+    background-color: #790000;
+    width: 190px;
+    height: 190px;
+  }
+  
+  .clicked p {
+    color: #5d5d5d;
+    font-size: calc(5em - 10px);
+  }
+  
+  #reflection {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 100px);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, yellow 0%, #18273a 65%) center no-repeat;
+    z-index: -2;
+    animation: linear tremble 0.1s infinite alternate;
+  }
+  
+  @keyframes tremble {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 98% 98%;
+    }
+  }
+  
